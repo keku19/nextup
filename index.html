@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Swipe to Success</title>
+  <title>UpNext</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -11,21 +11,29 @@
       padding: 0;
       background: #0f0f0f;
       color: #fff;
+      overflow-x: hidden;
     }
+
     header {
       background: #1a1a1a;
       padding: 2rem;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
+
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #00ffe1;
+      margin-bottom: 0.5rem;
     }
+
     p {
       font-size: 1.2rem;
       max-width: 600px;
-      margin: 1rem auto;
+      margin: 0 auto;
+      margin-bottom: 2rem;
     }
+
     .btn {
       background: #00ffe1;
       color: #000;
@@ -35,28 +43,86 @@
       cursor: pointer;
       margin-top: 1rem;
       border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
     }
+
+    .btn:hover {
+      background: #00e6c7;
+    }
+
     .section {
       padding: 3rem 2rem;
       text-align: center;
     }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1f1f1f;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 1rem;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 2rem;
+      color: #00ffe1;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin: 1rem 0;
+      color: #ddd;
+    }
+
     .features {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      max-width: 600px;
-      margin: auto;
     }
-    .feature {
-      background: #1f1f1f;
-      padding: 1.5rem;
-      border-radius: 12px;
-    }
+
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
       color: #888;
+    }
+
+    .swipe-action {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .swipe-btn {
+      background: #ff4081;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50%;
+      font-size: 2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .swipe-btn:hover {
+      background: #f50057;
     }
 
     @media(min-width: 768px) {
@@ -69,31 +135,36 @@
 </head>
 <body>
   <header>
-    <h1>Swipe to Success</h1>
+    <h1>UpNext</h1>
     <p>AI-powered networking that connects you with the right people to level up your career, startup, or passion.</p>
     <button class="btn">Join the Waitlist</button>
   </header>
 
   <section class="section">
     <h2>How It Works</h2>
-    <div class="features">
-      <div class="feature">
+    <div class="card-container">
+      <div class="card">
         <h3>Set Your Goals</h3>
         <p>Tell us what you're aiming for — a project partner, mentor, investor, or growth buddy.</p>
       </div>
-      <div class="feature">
+      <div class="card">
         <h3>Swipe Smart</h3>
         <p>Swipe through real people with matching ambitions. No fluff, just focused connections.</p>
       </div>
-      <div class="feature">
+      <div class="card">
         <h3>Match & Build</h3>
         <p>Connect, chat, and start building your dream with others who are on the same path.</p>
       </div>
     </div>
+
+    <div class="swipe-action">
+      <button class="swipe-btn">👎</button>
+      <button class="swipe-btn">👍</button>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Swipe to Success. All rights reserved.
+    &copy; 2025 UpNext. All rights reserved.
   </footer>
 </body>
 </html>
